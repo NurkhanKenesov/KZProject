@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Navbar scroll effect
 const nav = document.querySelector('nav');
 window.addEventListener('scroll', () => {
@@ -93,6 +94,18 @@ const createMobileMenu = () => {
 window.addEventListener('resize', createMobileMenu);
 window.addEventListener('load', createMobileMenu);
 
+=======
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+>>>>>>> 6b11b8430419086c0f2d1ff0cd926525fc8810e9
 // Form submission handling
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
